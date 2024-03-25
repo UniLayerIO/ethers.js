@@ -226,6 +226,7 @@ describe("Test Networks", function () {
         "matic", "matic-mumbai",
         "optimism", "optimism-goerli", "optimism-sepolia",
         "xdai",
+        "unilayer-testnet"
     ];
     const providerNames = [
         "AlchemyProvider", "InfuraProvider", "AnkrProvider",

@@ -23,7 +23,7 @@ function isWebSocketLike(value: any): value is WebSocketLike {
         typeof(value.close) === "function");
 }
 
-const Testnets = "goerli kovan sepolia classicKotti optimism-goerli arbitrum-goerli matic-mumbai bnbt".split(" ");
+const Testnets = "goerli kovan sepolia classicKotti optimism-goerli arbitrum-goerli matic-mumbai bnbt unilayer-testnet".split(" ");
 
 /**
  *  Returns a default provider for %%network%%.

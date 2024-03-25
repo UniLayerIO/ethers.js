@@ -17561,6 +17561,7 @@ function injectCommonNetworks() {
     registerEth("optimism-goerli", 420, {});
     registerEth("optimism-sepolia", 11155420, {});
     registerEth("xdai", 100, { ensNetwork: 1 });
+    registerEth("unilayer-testnet", 11989, {});
 }
 
 function copy$2(obj) {
@@ -20882,6 +20883,8 @@ class CloudflareProvider extends JsonRpcProvider {
  *  - Optimism Goerli Testnet (``optimism-goerli``)
  *  - Polygon (``matic``)
  *  - Polygon Mumbai Testnet (``matic-mumbai``)
+ *  - UniLayer Network Testnet (``unilayer-testnet``)
+ * // While in UniLayer Network case is not exactly Etherscan, but Blockscout could be safely assumed as a substitute here
  *
  *  @_subsection api/providers/thirdparty:Etherscan  [providers-etherscan]
  */
@@ -20983,6 +20986,8 @@ class EtherscanProvider extends AbstractProvider {
                 return "https:/\/api-optimistic.etherscan.io";
             case "optimism-goerli":
                 return "https:/\/api-goerli-optimistic.etherscan.io";
+            case "unilayer-testnet":
+                return "https:/\/explorer.testnet.unilayer.io";
         }
         assertArgument(false, "unsupported network", "network", this.network);
     }
@@ -21768,6 +21773,8 @@ class WebSocketProvider extends SocketProvider {
  *  - Optimism Sepolia Testnet (``optimism-sepolia``)
  *  - Polygon (``matic``)
  *  - Polygon Mumbai Testnet (``matic-mumbai``)
+ *  - UniLayer Network Testnet (``unilayer-testnet``)
+ * // While Eth RPC Gate is not exactly Infura, it imitates it fairly good.
  *
  *  @_subsection: api/providers/thirdparty:INFURA  [providers-infura]
  */
@@ -21810,6 +21817,8 @@ function getHost$2(name) {
             return "optimism-goerli.infura.io";
         case "optimism-sepolia":
             return "optimism-sepolia.infura.io";
+        case "unilayer-testnet":
+            return "testnet.unilayer.io";
     }
     assertArgument(false, "unsupported network", "network", name);
 }
@@ -22699,7 +22708,7 @@ function isWebSocketLike(value) {
     return (value && typeof (value.send) === "function" &&
         typeof (value.close) === "function");
 }
-const Testnets = "goerli kovan sepolia classicKotti optimism-goerli arbitrum-goerli matic-mumbai bnbt".split(" ");
+const Testnets = "goerli kovan sepolia classicKotti optimism-goerli arbitrum-goerli matic-mumbai bnbt unilayer-testnet".split(" ");
 /**
  *  Returns a default provider for %%network%%.
  *

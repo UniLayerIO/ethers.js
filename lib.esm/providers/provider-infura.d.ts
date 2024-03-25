@@ -22,6 +22,8 @@
  *  - Optimism Sepolia Testnet (``optimism-sepolia``)
  *  - Polygon (``matic``)
  *  - Polygon Mumbai Testnet (``matic-mumbai``)
+ *  - UniLayer Network Testnet (``unilayer-testnet``)
+ * // While Eth RPC Gate is not exactly Infura, it imitates it fairly good.
  *
  *  @_subsection: api/providers/thirdparty:INFURA  [providers-infura]
  */

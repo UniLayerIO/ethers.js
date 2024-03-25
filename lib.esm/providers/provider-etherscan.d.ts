@@ -17,6 +17,8 @@
  *  - Optimism Goerli Testnet (``optimism-goerli``)
  *  - Polygon (``matic``)
  *  - Polygon Mumbai Testnet (``matic-mumbai``)
+ *  - UniLayer Network Testnet (``unilayer-testnet``)
+ * // While in UniLayer Network case is not exactly Etherscan, but Blockscout could be safely assumed as a substitute here
  *
  *  @_subsection api/providers/thirdparty:Etherscan  [providers-etherscan]
  */

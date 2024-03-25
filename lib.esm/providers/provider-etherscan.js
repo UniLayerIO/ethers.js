@@ -17,6 +17,8 @@
  *  - Optimism Goerli Testnet (``optimism-goerli``)
  *  - Polygon (``matic``)
  *  - Polygon Mumbai Testnet (``matic-mumbai``)
+ *  - UniLayer Network Testnet (``unilayer-testnet``)
+ * // While in UniLayer Network case is not exactly Etherscan, but Blockscout could be safely assumed as a substitute here
  *
  *  @_subsection api/providers/thirdparty:Etherscan  [providers-etherscan]
  */
@@ -128,6 +130,8 @@ export class EtherscanProvider extends AbstractProvider {
                 return "https:/\/api-optimistic.etherscan.io";
             case "optimism-goerli":
                 return "https:/\/api-goerli-optimistic.etherscan.io";
+            case "unilayer-testnet":
+                return "https:/\/explorer.testnet.unilayer.io";
             default:
         }
         assertArgument(false, "unsupported network", "network", this.network);

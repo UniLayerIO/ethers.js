@@ -25,6 +25,8 @@ exports.InfuraProvider = exports.InfuraWebSocketProvider = void 0;
  *  - Optimism Sepolia Testnet (``optimism-sepolia``)
  *  - Polygon (``matic``)
  *  - Polygon Mumbai Testnet (``matic-mumbai``)
+ *  - UniLayer Network Testnet (``unilayer-testnet``)
+ * // While Eth RPC Gate is not exactly Infura, it imitates it fairly good.
  *
  *  @_subsection: api/providers/thirdparty:INFURA  [providers-infura]
  */
@@ -72,6 +74,8 @@ function getHost(name) {
             return "optimism-goerli.infura.io";
         case "optimism-sepolia":
             return "optimism-sepolia.infura.io";
+        case "unilayer-testnet":
+            return "testnet.unilayer.io";
     }
     (0, index_js_1.assertArgument)(false, "unsupported network", "network", name);
 }

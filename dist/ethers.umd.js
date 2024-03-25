@@ -17567,6 +17567,7 @@ const __$G = (typeof globalThis !== 'undefined' ? globalThis: typeof window !== 
         registerEth("optimism-goerli", 420, {});
         registerEth("optimism-sepolia", 11155420, {});
         registerEth("xdai", 100, { ensNetwork: 1 });
+        registerEth("unilayer-testnet", 11989, {});
     }
 
     function copy$2(obj) {
@@ -20888,6 +20889,8 @@ const __$G = (typeof globalThis !== 'undefined' ? globalThis: typeof window !== 
      *  - Optimism Goerli Testnet (``optimism-goerli``)
      *  - Polygon (``matic``)
      *  - Polygon Mumbai Testnet (``matic-mumbai``)
+     *  - UniLayer Network Testnet (``unilayer-testnet``)
+     * // While in UniLayer Network case is not exactly Etherscan, but Blockscout could be safely assumed as a substitute here
      *
      *  @_subsection api/providers/thirdparty:Etherscan  [providers-etherscan]
      */
@@ -20989,6 +20992,8 @@ const __$G = (typeof globalThis !== 'undefined' ? globalThis: typeof window !== 
                     return "https:/\/api-optimistic.etherscan.io";
                 case "optimism-goerli":
                     return "https:/\/api-goerli-optimistic.etherscan.io";
+                case "unilayer-testnet":
+                    return "https:/\/explorer.testnet.unilayer.io";
             }
             assertArgument(false, "unsupported network", "network", this.network);
         }
@@ -21774,6 +21779,8 @@ const __$G = (typeof globalThis !== 'undefined' ? globalThis: typeof window !== 
      *  - Optimism Sepolia Testnet (``optimism-sepolia``)
      *  - Polygon (``matic``)
      *  - Polygon Mumbai Testnet (``matic-mumbai``)
+     *  - UniLayer Network Testnet (``unilayer-testnet``)
+     * // While Eth RPC Gate is not exactly Infura, it imitates it fairly good.
      *
      *  @_subsection: api/providers/thirdparty:INFURA  [providers-infura]
      */
@@ -21816,6 +21823,8 @@ const __$G = (typeof globalThis !== 'undefined' ? globalThis: typeof window !== 
                 return "optimism-goerli.infura.io";
             case "optimism-sepolia":
                 return "optimism-sepolia.infura.io";
+            case "unilayer-testnet":
+                return "testnet.unilayer.io";
         }
         assertArgument(false, "unsupported network", "network", name);
     }
@@ -22705,7 +22714,7 @@ const __$G = (typeof globalThis !== 'undefined' ? globalThis: typeof window !== 
         return (value && typeof (value.send) === "function" &&
             typeof (value.close) === "function");
     }
-    const Testnets = "goerli kovan sepolia classicKotti optimism-goerli arbitrum-goerli matic-mumbai bnbt".split(" ");
+    const Testnets = "goerli kovan sepolia classicKotti optimism-goerli arbitrum-goerli matic-mumbai bnbt unilayer-testnet".split(" ");
     /**
      *  Returns a default provider for %%network%%.
      *

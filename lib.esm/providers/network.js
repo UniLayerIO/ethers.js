@@ -357,5 +357,6 @@ function injectCommonNetworks() {
     registerEth("optimism-goerli", 420, {});
     registerEth("optimism-sepolia", 11155420, {});
     registerEth("xdai", 100, { ensNetwork: 1 });
+    registerEth("unilayer-testnet", 11989, {});
 }
 //# sourceMappingURL=network.js.map
